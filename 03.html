@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+    <p id="parag">
+        AQUI VAI APARECER ALGUMA COISA...
+    </p>
+    <button id="btn">Clique aqui</button>
+
+    <script>
+        // EX 03
+        document.querySelector('#btn').addEventListener('click', mostraNome);
+        
+        function mostraNome() {
+            const nome = prompt('Digite seu nome');
+            document.getElementById('parag').innerText = `E aí ${nome} Você está deixando o seu site
+            dinâmico.`;
+        }
+    </script>
+</body>
+</html>

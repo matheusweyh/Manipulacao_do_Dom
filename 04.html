@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex. 04 - Contador de cliques</title>
+</head>
+<body>
+    <button id="incrementar">Incrementar</button>
+    <button id="zerar">Zerar</button>
+    <p id="texto">
+        O contador está com 0 cliques.
+    </p>
+    
+    <script>
+        // EX 04  
+        const btnIncrementar = document.getElementById('incrementar');
+        const btnZerar = document.getElementById('zerar');
+        const texto = document.getElementById('texto')
+
+        let cliques = 0
+        btnIncrementar.addEventListener('click', incrementa)
+
+        function incrementa(){
+            cliques++
+            texto.innerText = `O contador está com ${cliques} cliques.`
+        }
+
+        btnZerar.addEventListener('click', zera)
+        function zera(){
+            cliques = 0
+            texto.innerText = ``
+
+        }
+    </script>
+</body>
+</html>

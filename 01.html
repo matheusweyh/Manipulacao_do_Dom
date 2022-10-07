@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM + Javascript</title>
+    <style>
+        .oculta{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <button id="btn">Clique em Mim!</button>
+    </div>
+    
+    <script>
+      
+      
+      // EX 01
+         const botao = document.getElementById('btn'); //  <button id="btn">Clique em Mim!</button>
+        botao.addEventListener('click', addConteudo); // toda vez que o evento click acontecer, dispara a funcao
+        
+        function addConteudo(){
+            const div = document.getElementById('root');
+            div.classList.toggle('oculta')
+            div.innerText = "Olá Mundo!"
+        }    
+    </script>
+</body>
+</html>
